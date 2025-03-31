@@ -11,4 +11,5 @@ function loadData(dataPath) {
     }
 }
 loadData("data.json");
+//Ошибка 404
 loadData("data1.json");
