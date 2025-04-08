@@ -1,0 +1,13 @@
+<div>
+    <p>Основной компонент (я и ссылочки ниже из app.component.html)</p>
+
+    <nav>
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <a routerLink="/page1" routerLinkActive="active">page1</a>
+        <a routerLink="/page2" routerLinkActive="active">page2</a>
+        <a [routerLink]="['/page3', 5]" routerLinkActive="active">page3</a>
+    </nav>
+    <br>
+    <span>А вот чел ниже принадлежит одной из страниц:</span>
+    <router-outlet></router-outlet>
+</div>
