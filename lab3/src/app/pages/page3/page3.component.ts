@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 
 @Component({
@@ -12,7 +12,7 @@ export class Page3Component {
   title = 'item';
   id: number = 0;
 
-  constructor(private activateRoute: ActivatedRoute) {
+  constructor(private activateRoute: ActivatedRoute, private router: Router) {
     this.id = activateRoute.snapshot.params['id'];
   }
 
@@ -20,5 +20,10 @@ export class Page3Component {
     this.activateRoute.paramMap
       .pipe(switchMap((params: any) => params.getAll('id')))
       .subscribe((data: any) => this.id = +data);
+  }
+
+  goMain(): void {
+    this.router.navigate(['/']);
+    //this.router.navigateByUrl('/');
   }
 }
