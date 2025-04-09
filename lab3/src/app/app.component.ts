@@ -4,12 +4,14 @@ import {
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { Page3Component } from "./pages/page3/page3.component";
+import { ItalicDirective } from './core/directive/italic.directive'
 
 @Component({
     selector: "my-app",
     imports: [
         FormsModule,
-        RouterModule
+        RouterModule,
+        ItalicDirective
     ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'

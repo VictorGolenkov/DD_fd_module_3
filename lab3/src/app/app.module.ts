@@ -14,6 +14,7 @@ import { Page3Component } from './pages/page3/page3.component';
 import { confirmInGuard } from './core/guards/confirm-in.guard';
 import { confirmOutGuard } from './core/guards/confirm-out.guard';
 import { DataService } from "./core/services/data.service";
+import { ItalicDirective } from "./core/directive/italic.directive"
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        ItalicDirective
     ],
     providers: [DataService]
 })
