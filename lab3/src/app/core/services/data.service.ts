@@ -7,6 +7,6 @@ export class DataService{
     constructor(private http: HttpClient){ }
       
     getData(){
-        return this.http.get("assets/data.json")
+        return this.http.get("https://victorgolenkov.github.io/DD_fd_module_3/lab3/dist/assets/data.json")
     }
 }
