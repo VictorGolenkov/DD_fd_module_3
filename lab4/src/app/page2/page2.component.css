@@ -1,0 +1,37 @@
+.content {
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    background-color:rgb(243, 243, 243);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    border-style:outset;
+    
+}
+
+.form {
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.element {
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+

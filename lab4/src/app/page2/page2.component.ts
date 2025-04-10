@@ -32,6 +32,6 @@ export class Page2Component {
   }
 
   onNameChange(): void {
-    console.log('Что-то изменилось в поле' + this.name);
+    console.log('Что-то изменилось в поле ' + this.name);
   }
 }
