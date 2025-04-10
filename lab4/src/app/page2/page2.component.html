@@ -2,18 +2,18 @@
     <div class="form">
         <div class="element">
             <label>Имя:</label>
-            <input name="name" [(ngModel)]="name" (ngModelChange)="onNameChange()" />
+            <input name="name" [(ngModel)]="name" (ngModelChange)="onNameChange()" (input)="validateFields()"/>
         </div>
         <div class="element">
             <label>Фамилия:</label>
-            <input name="surname" [(ngModel)]="surname" />
+            <input name="surname" [(ngModel)]="surname" (input)="validateFields()"/>
         </div>
         <div class="element">
             <label>Возраст:</label>
-            <input type="number" name="age" [(ngModel)]="age" />
+            <input type="number" name="age" [(ngModel)]="age"  (input)="validateFields()"/>
         </div>
         <div class="button">
-            <button (click)="addUser()">Отправить!</button>
+            <button (click)="addUser()" [disabled]="!isValid">Отправить!</button>
         </div>
     </div>
 

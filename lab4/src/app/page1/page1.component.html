@@ -3,19 +3,18 @@
         <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
             <div class="element">
                 <label>Имя: </label>
-                <input name="userName" formControlName="userName" />
+                <input name="userName" formControlName="userName" pattern="[A-ZА-Я][a-zа-яё]+"/>
             </div>
             <div *ngIf="myForm.controls['userName'].invalid && myForm.controls['userName'].touched">
-                Не указано Имя!
+                Имя указано не корректно!
             </div>
 
             <div class="element">
                 <label>Фамилия: </label>
-                <input name="userSurname" formControlName="userSurname" />
+                <input name="userSurname" formControlName="userSurname" pattern="[A-ZА-Я][a-zа-яё]+"/>
             </div>
-            <div class="element" ,
-                *ngIf="myForm.controls['userSurname'].invalid && myForm.controls['userSurname'].touched">
-                Не указана Фамилия!
+            <div *ngIf="myForm.controls['userSurname'].invalid && myForm.controls['userSurname'].touched">
+                Фамилия указана не корректно!
             </div>
 
             <div class="button">
